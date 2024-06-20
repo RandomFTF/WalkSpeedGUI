@@ -1,0 +1,284 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local SurvivorSection = Instance.new("TextLabel")
+local BeastSection = Instance.new("TextLabel")
+local SurvivorWalkspeed = Instance.new("TextLabel")
+local CrawlSpeed = Instance.new("TextLabel")
+local SurvivorJumpPower = Instance.new("TextLabel")
+local BeastWalkspeed = Instance.new("TextLabel")
+local RunnerSpeed = Instance.new("TextLabel")
+local JumpFatigueSpeed = Instance.new("TextLabel")
+local BeastJumpPower = Instance.new("TextLabel")
+local disclamerabvalues = Instance.new("TextLabel")
+local Apply = Instance.new("TextButton")
+local survivorspeededit = Instance.new("TextBox")
+local crawlspeededit = Instance.new("TextBox")
+local survivorjumpedit = Instance.new("TextBox")
+local BeastWalkspeededit = Instance.new("TextBox")
+local RunnerSpeededit = Instance.new("TextBox")
+local jumpfatigueedit = Instance.new("TextBox")
+local beastjumppoweredit = Instance.new("TextBox")
+local changekeybindtextbox = Instance.new("TextBox")
+local Changetoggleguitext = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Frame.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.293824703, 0, 0.267857134, 0)
+Frame.Size = UDim2.new(0.495808393, 0, 0.462301582, 0)
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 414, 0, 50)
+Title.Font = Enum.Font.FredokaOne
+Title.Text = "FTF Walkspeed GUI (made by djolefuull)"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextSize = 25.000
+
+SurvivorSection.Name = "Survivor Section"
+SurvivorSection.Parent = Frame
+SurvivorSection.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SurvivorSection.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SurvivorSection.BorderSizePixel = 0
+SurvivorSection.Position = UDim2.new(0, 0, 0.214592278, 0)
+SurvivorSection.Size = UDim2.new(0, 200, 0, 27)
+SurvivorSection.Font = Enum.Font.FredokaOne
+SurvivorSection.Text = "Survivor"
+SurvivorSection.TextColor3 = Color3.fromRGB(255, 255, 255)
+SurvivorSection.TextSize = 26.000
+
+BeastSection.Name = "Beast Section"
+BeastSection.Parent = Frame
+BeastSection.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BeastSection.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BeastSection.BorderSizePixel = 0
+BeastSection.Position = UDim2.new(0.516908228, 0, 0.214592278, 0)
+BeastSection.Size = UDim2.new(0, 200, 0, 27)
+BeastSection.Font = Enum.Font.FredokaOne
+BeastSection.Text = "Beast"
+BeastSection.TextColor3 = Color3.fromRGB(255, 0, 0)
+BeastSection.TextSize = 26.000
+
+SurvivorWalkspeed.Name = "Survivor Walkspeed"
+SurvivorWalkspeed.Parent = Frame
+SurvivorWalkspeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SurvivorWalkspeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SurvivorWalkspeed.BorderSizePixel = 0
+SurvivorWalkspeed.Position = UDim2.new(0, 0, 0.330472112, 0)
+SurvivorWalkspeed.Size = UDim2.new(0, 144, 0, 19)
+SurvivorWalkspeed.Font = Enum.Font.FredokaOne
+SurvivorWalkspeed.Text = "Survivor Walkspeed"
+SurvivorWalkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+SurvivorWalkspeed.TextSize = 15.000
+
+CrawlSpeed.Name = "Crawl Speed"
+CrawlSpeed.Parent = Frame
+CrawlSpeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CrawlSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CrawlSpeed.BorderSizePixel = 0
+CrawlSpeed.Position = UDim2.new(0, 0, 0.412017167, 0)
+CrawlSpeed.Size = UDim2.new(0, 144, 0, 19)
+CrawlSpeed.Font = Enum.Font.FredokaOne
+CrawlSpeed.Text = "Crawl Speed"
+CrawlSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+CrawlSpeed.TextSize = 18.000
+
+SurvivorJumpPower.Name = "Survivor Jump Power"
+SurvivorJumpPower.Parent = Frame
+SurvivorJumpPower.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SurvivorJumpPower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SurvivorJumpPower.BorderSizePixel = 0
+SurvivorJumpPower.Position = UDim2.new(0, 0, 0.493562222, 0)
+SurvivorJumpPower.Size = UDim2.new(0, 144, 0, 19)
+SurvivorJumpPower.Font = Enum.Font.FredokaOne
+SurvivorJumpPower.Text = "Survivor Jump Power"
+SurvivorJumpPower.TextColor3 = Color3.fromRGB(255, 255, 255)
+SurvivorJumpPower.TextSize = 15.000
+
+BeastWalkspeed.Name = "Beast Walkspeed"
+BeastWalkspeed.Parent = Frame
+BeastWalkspeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BeastWalkspeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BeastWalkspeed.BorderSizePixel = 0
+BeastWalkspeed.Position = UDim2.new(0.516908228, 0, 0.330472112, 0)
+BeastWalkspeed.Size = UDim2.new(0, 144, 0, 19)
+BeastWalkspeed.Font = Enum.Font.FredokaOne
+BeastWalkspeed.Text = "Beast Walkspeed"
+BeastWalkspeed.TextColor3 = Color3.fromRGB(229, 0, 0)
+BeastWalkspeed.TextSize = 18.000
+
+RunnerSpeed.Name = "Runner Speed"
+RunnerSpeed.Parent = Frame
+RunnerSpeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RunnerSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RunnerSpeed.BorderSizePixel = 0
+RunnerSpeed.Position = UDim2.new(0.516908228, 0, 0.412017167, 0)
+RunnerSpeed.Size = UDim2.new(0, 144, 0, 19)
+RunnerSpeed.Font = Enum.Font.FredokaOne
+RunnerSpeed.Text = "Runner Speed"
+RunnerSpeed.TextColor3 = Color3.fromRGB(229, 0, 0)
+RunnerSpeed.TextSize = 18.000
+
+JumpFatigueSpeed.Name = "Jump Fatigue Speed"
+JumpFatigueSpeed.Parent = Frame
+JumpFatigueSpeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+JumpFatigueSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JumpFatigueSpeed.BorderSizePixel = 0
+JumpFatigueSpeed.Position = UDim2.new(0.516908228, 0, 0.493562222, 0)
+JumpFatigueSpeed.Size = UDim2.new(0, 144, 0, 19)
+JumpFatigueSpeed.Font = Enum.Font.FredokaOne
+JumpFatigueSpeed.Text = "Jump Fatigue Speed"
+JumpFatigueSpeed.TextColor3 = Color3.fromRGB(229, 0, 0)
+JumpFatigueSpeed.TextSize = 16.000
+
+BeastJumpPower.Name = "Beast Jump Power"
+BeastJumpPower.Parent = Frame
+BeastJumpPower.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BeastJumpPower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BeastJumpPower.BorderSizePixel = 0
+BeastJumpPower.Position = UDim2.new(0.516908228, 0, 0.575107276, 0)
+BeastJumpPower.Size = UDim2.new(0, 144, 0, 19)
+BeastJumpPower.Font = Enum.Font.FredokaOne
+BeastJumpPower.Text = "Beast Jump Power"
+BeastJumpPower.TextColor3 = Color3.fromRGB(229, 0, 0)
+BeastJumpPower.TextSize = 18.000
+
+disclamerabvalues.Name = "disclamer ab values"
+disclamerabvalues.Parent = Frame
+disclamerabvalues.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+disclamerabvalues.BorderColor3 = Color3.fromRGB(0, 0, 0)
+disclamerabvalues.BorderSizePixel = 0
+disclamerabvalues.Position = UDim2.new(0.30917874, 0, 0.703862667, 0)
+disclamerabvalues.Size = UDim2.new(0, 144, 0, 19)
+disclamerabvalues.Font = Enum.Font.FredokaOne
+disclamerabvalues.Text = "All values Are set to their default value"
+disclamerabvalues.TextColor3 = Color3.fromRGB(255, 255, 255)
+disclamerabvalues.TextSize = 20.000
+
+Apply.Name = "Apply"
+Apply.Parent = Frame
+Apply.BackgroundColor3 = Color3.fromRGB(222, 206, 230)
+Apply.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Apply.BorderSizePixel = 0
+Apply.Position = UDim2.new(0, 0, 0.785407722, 0)
+Apply.Size = UDim2.new(0, 200, 0, 50)
+Apply.Font = Enum.Font.FredokaOne
+Apply.Text = "Apply (updates the settings)"
+Apply.TextColor3 = Color3.fromRGB(0, 0, 0)
+Apply.TextSize = 16.000
+
+survivorspeededit.Name = "survivor speed edit"
+survivorspeededit.Parent = Frame
+survivorspeededit.BackgroundColor3 = Color3.fromRGB(199, 199, 199)
+survivorspeededit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+survivorspeededit.Position = UDim2.new(0.347826093, 0, 0.330472112, 0)
+survivorspeededit.Size = UDim2.new(0, 56, 0, 19)
+survivorspeededit.Font = Enum.Font.SourceSans
+survivorspeededit.Text = "16"
+survivorspeededit.TextColor3 = Color3.fromRGB(0, 0, 0)
+survivorspeededit.TextSize = 14.000
+
+crawlspeededit.Name = "crawl speed edit"
+crawlspeededit.Parent = Frame
+crawlspeededit.BackgroundColor3 = Color3.fromRGB(199, 199, 199)
+crawlspeededit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+crawlspeededit.Position = UDim2.new(0.347826093, 0, 0.412017167, 0)
+crawlspeededit.Size = UDim2.new(0, 56, 0, 19)
+crawlspeededit.Font = Enum.Font.SourceSans
+crawlspeededit.Text = "8"
+crawlspeededit.TextColor3 = Color3.fromRGB(0, 0, 0)
+crawlspeededit.TextSize = 14.000
+
+survivorjumpedit.Name = "survivor jump edit"
+survivorjumpedit.Parent = Frame
+survivorjumpedit.BackgroundColor3 = Color3.fromRGB(199, 199, 199)
+survivorjumpedit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+survivorjumpedit.Position = UDim2.new(0.347826093, 0, 0.493562222, 0)
+survivorjumpedit.Size = UDim2.new(0, 56, 0, 19)
+survivorjumpedit.Font = Enum.Font.SourceSans
+survivorjumpedit.Text = "36"
+survivorjumpedit.TextColor3 = Color3.fromRGB(0, 0, 0)
+survivorjumpedit.TextSize = 14.000
+
+BeastWalkspeededit.Name = "Beast Walkspeed edit"
+BeastWalkspeededit.Parent = Frame
+BeastWalkspeededit.BackgroundColor3 = Color3.fromRGB(199, 199, 199)
+BeastWalkspeededit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BeastWalkspeededit.Position = UDim2.new(0.864734292, 0, 0.330472112, 0)
+BeastWalkspeededit.Size = UDim2.new(0, 55, 0, 19)
+BeastWalkspeededit.Font = Enum.Font.SourceSans
+BeastWalkspeededit.Text = "17"
+BeastWalkspeededit.TextColor3 = Color3.fromRGB(0, 0, 0)
+BeastWalkspeededit.TextSize = 14.000
+
+RunnerSpeededit.Name = "Runner Speed edit"
+RunnerSpeededit.Parent = Frame
+RunnerSpeededit.BackgroundColor3 = Color3.fromRGB(199, 199, 199)
+RunnerSpeededit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RunnerSpeededit.Position = UDim2.new(0.864734292, 0, 0.412017167, 0)
+RunnerSpeededit.Size = UDim2.new(0, 55, 0, 19)
+RunnerSpeededit.Font = Enum.Font.SourceSans
+RunnerSpeededit.Text = "26"
+RunnerSpeededit.TextColor3 = Color3.fromRGB(0, 0, 0)
+RunnerSpeededit.TextSize = 14.000
+
+jumpfatigueedit.Name = "jump fatigue edit"
+jumpfatigueedit.Parent = Frame
+jumpfatigueedit.BackgroundColor3 = Color3.fromRGB(199, 199, 199)
+jumpfatigueedit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+jumpfatigueedit.Position = UDim2.new(0.864734292, 0, 0.493562222, 0)
+jumpfatigueedit.Size = UDim2.new(0, 55, 0, 19)
+jumpfatigueedit.Font = Enum.Font.SourceSans
+jumpfatigueedit.Text = "3.4"
+jumpfatigueedit.TextColor3 = Color3.fromRGB(0, 0, 0)
+jumpfatigueedit.TextSize = 14.000
+
+beastjumppoweredit.Name = "beast jump power edit"
+beastjumppoweredit.Parent = Frame
+beastjumppoweredit.BackgroundColor3 = Color3.fromRGB(199, 199, 199)
+beastjumppoweredit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+beastjumppoweredit.Position = UDim2.new(0.864734292, 0, 0.575107276, 0)
+beastjumppoweredit.Size = UDim2.new(0, 55, 0, 19)
+beastjumppoweredit.Font = Enum.Font.SourceSans
+beastjumppoweredit.Text = "36"
+beastjumppoweredit.TextColor3 = Color3.fromRGB(0, 0, 0)
+beastjumppoweredit.TextSize = 14.000
+
+changekeybindtextbox.Name = "change keybind text box"
+changekeybindtextbox.Parent = Frame
+changekeybindtextbox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+changekeybindtextbox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+changekeybindtextbox.BorderSizePixel = 0
+changekeybindtextbox.Position = UDim2.new(0.850241542, 0, 0.785407722, 0)
+changekeybindtextbox.Size = UDim2.new(0, 61, 0, 50)
+changekeybindtextbox.Font = Enum.Font.SourceSans
+changekeybindtextbox.Text = "RAlt"
+changekeybindtextbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+changekeybindtextbox.TextSize = 14.000
+
+Changetoggleguitext.Name = "Change toggle gui text"
+Changetoggleguitext.Parent = Frame
+Changetoggleguitext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Changetoggleguitext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Changetoggleguitext.BorderSizePixel = 0
+Changetoggleguitext.Position = UDim2.new(0.555555582, 0, 0.785407722, 0)
+Changetoggleguitext.Size = UDim2.new(0, 121, 0, 50)
+Changetoggleguitext.Font = Enum.Font.FredokaOne
+Changetoggleguitext.Text = "Change Gui Toggle Key"
+Changetoggleguitext.TextColor3 = Color3.fromRGB(0, 0, 0)
+Changetoggleguitext.TextSize = 11.000
